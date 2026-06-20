@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Geist", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Geist", "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer utilities {
+  .glass-panel {
+    background: rgba(17, 17, 24, 0.8);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .glass-card {
+    background: rgba(17, 17, 24, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .glass-card:hover {
+    background: rgba(17, 17, 24, 0.6);
+    border-color: rgba(173, 198, 255, 0.25);
+    box-shadow: 0 0 20px rgba(173, 198, 255, 0.06);
+    transform: translateY(-2px);
+  }
+  .chat-bubble-ai {
+    background: rgba(38, 54, 74, 0.45);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(173, 198, 255, 0.08);
+  }
+  .highlight-blue {
+    background: rgba(173, 198, 255, 0.18);
+    border-bottom: 2px solid #adc6ff;
+    padding: 1px 4px;
+    border-radius: 2px;
+  }
+  .highlight-warning {
+    background: rgba(223, 116, 18, 0.18);
+    border-bottom: 2px solid #df7412;
+    padding: 1px 4px;
+    border-radius: 2px;
+  }
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #26364a;
+    border-radius: 10px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #424754;
+  }
+}
+
